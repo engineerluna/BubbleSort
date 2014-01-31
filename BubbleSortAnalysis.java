@@ -1,23 +1,4 @@
-/*Analysis of BubbleSort Algorithm Example to Practice Java Skills
-
-  Computed the BubbleSort Algorithm using four different amount of numbers needed
-  to be sorted and then displayed the times to compare. Used the RunTime to 
-  compare operations.
-
-
---Results-----------------------------------------------------------------------
-luis@ubpc:~/Desktop/Project$ java BubbleSortAnalysis > results.txt
-luis@ubpc:~/Desktop/Project$ cat results.txt 
-Size= 50		Elapsed Time for Bubble Sort = 0 milliseconds
-seconds: 0.0
-Size= 500		Elapsed Time for Bubble Sort = 12 milliseconds
-seconds: 0.012
-Size= 5000		Elapsed Time for Bubble Sort = 164 milliseconds
-seconds: 0.164
-Size= 50000		Elapsed Time for Bubble Sort = 14365 milliseconds
-seconds: 14.365
---------------------------------------------------------------------------------
-  
+/*
   January 02, 2014
 Author: EngineerLuna
   */
@@ -26,16 +7,20 @@ import java.util.*;
 public class BubbleSortAnalysis{
 	public static void main(String[] args){
 		
+		//An array with #'s that will be used to determine the
+		//size of the array that will be sorted
 		int[] sizeOfArray = {50, 500, 5000,50000};
 
 		
 		for(int m=0; m < sizeOfArray.length; m++)
 		{
-		
+				//Created the array with various sizes 
+				//depending on the sizeOfArray location
 				int[] a = new int[sizeOfArray[m]];
-				Random rng = new Random();
+
 		
 				//Fill array a with random integers
+				Random rng = new Random();
 				for(int k = 0; k <sizeOfArray[m] ; k++)
 					a[k] = rng.nextInt(10000);
 			
